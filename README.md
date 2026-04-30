@@ -7,6 +7,7 @@
 | Тег | Что появилось |
 | --- | --- |
 | `v0.1-hello-api` | FastAPI + uvicorn, `GET /tasks` с хардкод-данными |
+| `v0.1-params` | `GET /tasks/{id}` с path-параметром, фильтр `?done=true` и `?limit=N` через query |
 
 (список будет пополняться по мере выхода уроков)
 
