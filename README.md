@@ -8,6 +8,7 @@
 | --- | --- |
 | `v0.1-hello-api` | FastAPI + uvicorn, `GET /tasks` с хардкод-данными |
 | `v0.1-params` | `GET /tasks/{id}` с path-параметром, фильтр `?done=true` и `?limit=N` через query |
+| `v0.1-pydantic` | `POST /tasks` принимает JSON-тело с Pydantic-валидацией |
 
 (список будет пополняться по мере выхода уроков)
 
