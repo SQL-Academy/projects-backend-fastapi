@@ -12,6 +12,7 @@
 | `v0.2-responses` | Response-модели через `Task`/`TaskCreate`, статус-код `201` на создание, `404` через `HTTPException` |
 | `v0.3-postgres-up` | Postgres 16 в Docker через `docker-compose.yml`, volume для персистентности |
 | `v0.3-sqlalchemy-basics` | SQLAlchemy 2.x: модель `Task` в `models.py`, engine + `SessionLocal` в `database.py`, таблица создаётся через `Base.metadata.create_all` |
+| `v0.3-depends` | `get_db()` как dependency-with-yield, `GET /tasks` читает из Postgres через `Depends(get_db)`. Таблицы создаются на старте приложения |
 
 (список будет пополняться по мере выхода уроков)
 
