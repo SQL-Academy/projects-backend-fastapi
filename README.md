@@ -9,6 +9,7 @@
 | `v0.1-hello-api` | FastAPI + uvicorn, `GET /tasks` с хардкод-данными |
 | `v0.1-params` | `GET /tasks/{id}` с path-параметром, фильтр `?done=true` и `?limit=N` через query |
 | `v0.1-pydantic` | `POST /tasks` принимает JSON-тело с Pydantic-валидацией |
+| `v0.2-responses` | Response-модели через `Task`/`TaskCreate`, статус-код `201` на создание, `404` через `HTTPException` |
 
 (список будет пополняться по мере выхода уроков)
 
