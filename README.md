@@ -11,6 +11,7 @@
 | `v0.1-pydantic` | `POST /tasks` принимает JSON-тело с Pydantic-валидацией |
 | `v0.2-responses` | Response-модели через `Task`/`TaskCreate`, статус-код `201` на создание, `404` через `HTTPException` |
 | `v0.3-postgres-up` | Postgres 16 в Docker через `docker-compose.yml`, volume для персистентности |
+| `v0.3-sqlalchemy-basics` | SQLAlchemy 2.x: модель `Task` в `models.py`, engine + `SessionLocal` в `database.py`, таблица создаётся через `Base.metadata.create_all` |
 
 (список будет пополняться по мере выхода уроков)
 
