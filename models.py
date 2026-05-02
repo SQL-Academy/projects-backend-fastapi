@@ -10,3 +10,4 @@ class Task(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     title: Mapped[str] = mapped_column(String, nullable=False)
     done: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    priority: Mapped[int | None] = mapped_column(Integer, default=None)

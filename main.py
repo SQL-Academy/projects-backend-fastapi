@@ -3,9 +3,7 @@ from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
 import models
-from database import Base, engine, get_db
-
-Base.metadata.create_all(engine)
+from database import get_db
 
 app = FastAPI()
 
@@ -22,6 +20,7 @@ class TaskUpdate(BaseModel):
 
 class Task(TaskCreate):
     id: int
+    priority: int | None = None
 
 
 @app.get("/tasks", response_model=list[Task])
