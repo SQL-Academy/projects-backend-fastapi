@@ -11,7 +11,10 @@ if config.config_file_name is not None:
 # для autogenerate Alembic-у нужно знать «правильную» схему:
 # импорт моделей регистрирует их в Base.metadata.
 import models
+from config import settings
 from database import Base
+
+config.set_main_option("sqlalchemy.url", settings.database_url)
 
 target_metadata = Base.metadata
 
