@@ -1,22 +1,15 @@
-from fastapi.testclient import TestClient
-
-from main import app
-
-client = TestClient(app)
-
-
-def test_openapi_available():
+def test_openapi_available(client):
     response = client.get("/openapi.json")
     assert response.status_code == 200
     assert response.json()["info"]["title"] == "FastAPI"
 
 
-def test_tasks_require_auth():
+def test_tasks_require_auth(client):
     response = client.get("/tasks")
     assert response.status_code == 401
 
 
-def test_register_login_and_list_tasks():
+def test_register_login_and_list_tasks(client):
     register = client.post(
         "/auth/register",
         json={"email": "alice@example.com", "password": "qwerty123"},
