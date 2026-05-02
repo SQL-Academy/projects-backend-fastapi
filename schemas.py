@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 
 
 class TaskCreate(BaseModel):
@@ -14,3 +14,13 @@ class TaskUpdate(BaseModel):
 class Task(TaskCreate):
     id: int
     priority: int | None = None
+
+
+class UserCreate(BaseModel):
+    email: EmailStr
+    password: str
+
+
+class UserOut(BaseModel):
+    id: int
+    email: EmailStr

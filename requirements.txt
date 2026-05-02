@@ -5,3 +5,4 @@ psycopg[binary]
 alembic
 pydantic-settings
 bcrypt
+pydantic[email]

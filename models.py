@@ -11,3 +11,11 @@ class Task(Base):
     title: Mapped[str] = mapped_column(String, nullable=False)
     done: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
     priority: Mapped[int | None] = mapped_column(Integer, default=None)
+
+
+class User(Base):
+    __tablename__ = "users"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    email: Mapped[str] = mapped_column(String, unique=True, nullable=False)
+    password_hash: Mapped[str] = mapped_column(String, nullable=False)
