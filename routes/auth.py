@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 
 from database import get_db
 from repositories.users import UserRepository
-from schemas import UserCreate, UserOut
+from schemas import TokenOut, UserCreate, UserOut
 from services.auth import AuthService
 
 router = APIRouter(prefix="/auth", tags=["auth"])
@@ -27,7 +27,7 @@ def register(
     return service.register(payload)
 
 
-@router.post("/login", response_model=UserOut)
+@router.post("/login", response_model=TokenOut)
 def login(
     payload: UserCreate,
     service: AuthService = Depends(get_auth_service),
