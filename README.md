@@ -18,7 +18,7 @@
 | `v0.4-fat-routes` | `routes/tasks.py` через `APIRouter`, Pydantic-схемы вынесены в `schemas.py`, `main.py` похудел до 6 строк |
 | `v0.4-services-repositories` | Слои разделены: `routes/`, `services/`, `repositories/`. Бизнес-логика отдельно от SQL |
 | `v0.4-config-env` | `pydantic-settings`, `DATABASE_URL` и пароли уехали в `.env`, добавлен `.env.example` |
-| `v0.5-password-hashing` | `security.py` с `hash_password` / `verify_password` на bcrypt через passlib |
+| `v0.5-password-hashing` | `security.py` с `hash_password` / `verify_password` через bcrypt |
 | `v0.5-register-and-login` | Модель `User`, эндпоинты `/auth/register` и `/auth/login`, миграция для таблицы `users` |
 | `v0.5-jwt-tokens` | `/auth/login` возвращает JWT через python-jose, `SECRET_KEY` и `ACCESS_TOKEN_EXPIRE_MINUTES` в env |
 | `v0.5-protecting-endpoints` | `dependencies.py` с `get_current_user`, у задач появился `owner_id`, изоляция между пользователями (404 на чужие задачи) |
